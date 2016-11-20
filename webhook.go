@@ -30,7 +30,7 @@ func Webhook(path string) error {
 		return err
 	}
 	if resp.StatusCode >= 400 {
-		return fmt.Errorf("webhook: status code was %s", resp.StatusCode)
+		return fmt.Errorf("webhook: status code was %d", resp.StatusCode)
 	}
 	return nil
 }
