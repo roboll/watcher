@@ -2,8 +2,8 @@ package main
 
 import (
 	"errors"
+	"flag"
 	"log"
-	"os"
 	"os/exec"
 	"strings"
 
@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	execCommand = os.Getenv("EXEC_COMMAND")
+	execCommand = flag.String("exec-command", "", "exec command")
 )
 
 func init() {
@@ -20,7 +20,7 @@ func init() {
 
 func Exec(path string) error {
 	log.Printf("exec: %s", path)
-	args := strings.Split(execCommand, " ")
+	args := strings.Split(*execCommand, " ")
 
 	switch len(args) {
 	case 0:

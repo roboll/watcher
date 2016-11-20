@@ -10,15 +10,15 @@ import (
 )
 
 var (
-	targets     = flag.String("targets", "", "comma-separated files and/or dirs to watch")
-	handlerType = flag.String("handler", "", "handler type")
+	targets     = flag.String("watch", "", "comma-separated files and/or dirs to watch")
+	handlerType = flag.String("handler", "exec", "handler type")
 )
 
 func main() {
 	flag.Parse()
 
 	if *targets == "" {
-		log.Fatal("targets is required")
+		log.Fatal("watch is required")
 	}
 
 	handler, ok := handlers.Get(*handlerType)
