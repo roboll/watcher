@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "WCpgePNKiUKt0S0VE/e5kF5OnzU=",
+			"path": "gopkg.in/fsnotify.v1",
+			"revision": "8611c35ab31c1c28aa903d33cf8b6e44a399b09e",
+			"revisionTime": "2016-01-10T15:04:37Z"
+		}
+	],
+	"rootPath": "github.com/roboll/watcher"
+}
